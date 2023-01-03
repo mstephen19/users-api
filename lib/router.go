@@ -19,7 +19,8 @@ type Router struct {
 	handlers map[string][]*Handler
 }
 
-// Create a router that
+// Create a router that can be used to handle routes based on both request method
+// and a regular expression that will be used to test the path.
 func NewRouter() *Router {
 	router := &Router{}
 	router.handlers = make(map[string][]*Handler)
