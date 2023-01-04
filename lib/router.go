@@ -13,7 +13,7 @@ type jsonError struct {
 	Message string `json:"message"`
 }
 
-func NewJsonError(message string) ([]byte, error) {
+func NewJsonMessage(message string) ([]byte, error) {
 	return json.Marshal(jsonError{message})
 }
 
